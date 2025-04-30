@@ -4,6 +4,7 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@tsconfig/node22": "^22.0.1",
     "@types/express": "^5.0.1",
     "@types/node": "^22.15.3",
     "eslint": "^9.25.1",
