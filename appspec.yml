@@ -5,14 +5,14 @@ files:
     destination: /home/ubuntu/backend
 hooks:
   ApplicationStop:
-    - location: /platform-engineering-ci-example/backend/scripts/application_stop.sh
+    - location: backend/scripts/application_stop.sh
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: /platform-engineering-ci-example/backend/scripts/before_install.sh
+    - location: backend/scripts/before_install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: /platform-engineering-ci-example/backend/scripts/application_start.sh
+    - location: backend/scripts/application_start.sh
       timeout: 300
       runas: root
