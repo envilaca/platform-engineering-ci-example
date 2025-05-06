@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/backend
+    destination: /home/ubuntu/example_app
 hooks:
   ApplicationStop:
     - location: backend/scripts/application_stop.sh
@@ -12,7 +12,11 @@ hooks:
     - location: backend/scripts/before_install.sh
       timeout: 300
       runas: root
+  AfterInstall:
+    - location: backend/scripts/after_install.sh
+      timeout: 300
+      runas: ubuntu
   ApplicationStart:
     - location: backend/scripts/application_start.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
