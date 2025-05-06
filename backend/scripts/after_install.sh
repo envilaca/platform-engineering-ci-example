@@ -8,6 +8,7 @@ cd /home/ubuntu/example_app/backend
 
 #install node modules
 npm install
+sudo npm install pm2@latest -g
 
 #start our node app in the background
 npm start > app.out.log 2> app.err.log < /dev/null &

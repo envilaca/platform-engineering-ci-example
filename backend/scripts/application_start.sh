@@ -2,4 +2,4 @@
 
 cd /home/ubuntu/example_app/backend/
 
-node ./dist/server.js
+pm2 start ./dist/server.js --name backend
