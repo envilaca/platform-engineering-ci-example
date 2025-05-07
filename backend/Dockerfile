@@ -1,4 +1,4 @@
-FROM node:22-alpine AS build
+FROM node:slim@sha256:b3ae4060c7bb20d34896ab3e1f5f3d2ee7dcdd10 AS build
 WORKDIR /build/
 
 COPY src/ ./src/
@@ -8,7 +8,7 @@ RUN npm clean-install --include=dev
 RUN npm run build
 
 
-FROM node:22-alpine
+FROM node:slim@sha256:b3ae4060c7bb20d34896ab3e1f5f3d2ee7dcdd10
 WORKDIR /backend
 
 COPY --from=build /build/dist/ ./
